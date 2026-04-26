@@ -3,20 +3,20 @@
 ## Description
 
 This project aims to visualize the surface projection of seismic waves on the Moon produced by meteoroid impacts.
-It is written in Python and uses the datas produced by AxiSEM3D simulations.
+It is written in Python and uses the data produced by AxiSEM3D simulations.
 
 There are two part in the code:
 - The first part is called `93stations_processing.py` in order to create the PyVista meshes that will be visualized.
 - The second part is called `93png_creation_seismo.py` in order to visualize the meshes and create the images.
 
 In order to have a background image for the Moon, it is necessary to download a background image in
-https://svs.gsfc.nasa.gov/4720/ for instance. I used the file `lroc_color_poles_16k.jpg` as the image of the Moon. 
+https://svs.gsfc.nasa.gov/4720/ for instance. I used the file `lroc_color_poles_16k.jpg` as the image of the Moon.
 It needs to be in the same repository as the code. Don't hesitate to change it if you need another level of
 resolution for the image, it needs to be a .jpg !
 
 ## Requirements
 
-In order to run the code, several Python packages are required. To install the conda environment with the dependencies, 
+In order to run the code, several Python packages are required. To install the conda environment with the dependencies,
 one can install it by using the conda_environment.yaml file and the following command:
 
 ```bash
@@ -26,15 +26,15 @@ conda env create -f conda_environment.yaml
 Once this is done, one can activate the conda env and install the irfpy packages using pip :
 
 ```bash
-pip install --find-links="https://irfpy.irf.se/sdist/" irfpy.util 
+pip install --find-links="https://irfpy.irf.se/sdist/" irfpy.util
 pip install --no-index --find-links="https://irfpy.irf.se/sdist" irfpy.planets --no-build-isolation
 ```
-The package `open3d` only works with certain versions of Python, I used the 3.11 version of Python. 
-To do so, it is convenient to use Miniconda in order to create a python environment. After the conda environment 
+The package `open3d` only works with certain versions of Python, I used the 3.11 version of Python.
+To do so, it is convenient to use Miniconda in order to create a python environment. After the conda environment
 installation is complete, use the conda forge library to install additional packages.
 
-In addition, the repository `impact_simulations` from https://github.com/cerinunn/impact_simulations.git has to be in 
-the folder `11_wave_visualization_Moon`. Moreover, it is very important to run the Code Block 1 in `TauP_plots.ipynb` 
+In addition, the repository `impact_simulations` from https://github.com/cerinunn/impact_simulations.git has to be in
+the folder `11_wave_visualization_Moon`. Moreover, it is very important to run the Code Block 1 in `TauP_plots.ipynb`
 from the repository `impact_simulations` in order to create the TauP models before running the other codes.
 
 ## Usage
@@ -44,7 +44,7 @@ that creates the meshes and `png_creation_seismo.py` to create the images. To ge
 `combine_png.ipynb`.
 
 To correctly build the meshes and images, the results of an AxiSEM3D simulation must be present in the
-`11_wave_visualization_Moon` repository. Moreover, the `axisem3d_synthetics.nc.rank_all.nc` must be in 
+`11_wave_visualization_Moon` repository. Moreover, the `axisem3d_synthetics.nc.rank_all.nc` must be in
 `name_of_the_run/simu3D/output/stations/stations_array/axisem3d_synthetics.nc.rank_all.nc`. In order to
 build this netcdf combined file, one can use the section 2 of the `impact_simulations/comine_netcdf.ipynb` notebook.
 
@@ -72,13 +72,13 @@ NB: Using the caffeinate package, after installation, allows the code to run eve
 caffeinate python stations_processing_png.py
 ```
 
-## Example 
+## Example
 
 After initializing the condo environment and adding the required packages.
 
-Let's visualize a small simulation called `158_ISSI_atten_slice_10_simplified` available in the example. 
+Let's visualize a small simulation called `158_ISSI_atten_slice_10_simplified` available in the example.
 
-First, get the parameters of the simulation in the `stations_processing.py`, make sure to put the top directory of 
+First, get the parameters of the simulation in the `stations_processing.py`, make sure to put the top directory of
 your simulation in the `top_dir` variable:
 
 ```python
@@ -88,7 +88,7 @@ run = '158_ISSI_atten_slice_10_simplified'
 # model for TauP
 model_taup='homogeneous_Moon_taup' # it has no boundaries
 
-# top level dir 
+# top level dir
 top_dir = '/Users/replace_with_your_username/Documents/Simulations/' # to adapt with user's directory
 folder='simu3D' # DO NOT CHANGE
 
@@ -112,7 +112,7 @@ cd /path/to/the/code/directory/
 caffeinate python stations_processing.py
 ```
 
-And then, when the first script is done, one can open the `png_creation_seismo.py` file and change the parameters 
+And then, when the first script is done, one can open the `png_creation_seismo.py` file and change the parameters
 as follow (again one needs to adapt the `top_dir`  variable):
 
 ```python
@@ -151,7 +151,7 @@ filtering...
 setup complete
 ```
 
-One can stop the computation whenever the number of saved mesh is sufficient. This code is used to produce the meshes. 
+One can stop the computation whenever the number of saved mesh is sufficient. This code is used to produce the meshes.
 They will be saved in `158_ISSI_atten_slice_10_simplified/simu3D/output/stations/stations_array/mesh/`.
 
 Then, one can run the code using:
@@ -171,7 +171,7 @@ setup complete
 The created images will then appear one by one in the
 `/158_ISSI_atten_slice_10_simplified/simu3D/output/stations/stations_array/result` folder.
 
-Finally, let's use the notebook `combine_png.ipynb` by changing the name and title of the simulation in the first cell. 
+Finally, let's use the notebook `combine_png.ipynb` by changing the name and title of the simulation in the first cell.
 The video is then created and uploaded in the
 `/158_ISSI_atten_slice_10_simplified/simu3D/output/stations/stations_array/video` folder.
 

@@ -1,15 +1,15 @@
 # Example
 
-For this example, we will use the files from the AxiSEM3D repository [examples folder](https://github.com/AxiSEMunity/AxiSEM3D/tree/master/examples). 
+For this example, we will use the files from the AxiSEM3D repository [examples folder](https://github.com/AxiSEMunity/AxiSEM3D/tree/master/examples).
 
 
-Run AxiSEM3D. 
+Run AxiSEM3D.
 
 ```bash
 ./build/axisem3D --input ./examples/00_global_1D/input
 ```
 
-In this example AxiSEM3D uses as input, files from the `./examples/00_global_1D/input` directory.  If you did not specfiy `--input`, AxiSEM3D would look for a directory called `./input` and exit iwth a `Missing input directory` warning if not found.
+In this example AxiSEM3D uses as input, files from the `./examples/00_global_1D/input` directory.  If you did not specify `--input`, AxiSEM3D would look for a directory called `./input` and exit with a `Missing input directory` warning if not found.
 
 The outputs are written to the default directory `./output`. Alternatively, you may specify an output directory by using the `--output` flag.
 
@@ -17,17 +17,17 @@ Upon execution AxiSEM3D will report back your parameters and execution detail:
 
 ```
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                                                                
-      A            |i .|'''.|'||''''E'||    ||'  ____'||''|.    
-     |||   ... ...... ||..  ' ||  .   |||  |||   ` // ||   ||   
-    |  ||   '|..'  ||  ''|||. ||''|   |'|..'||    //  ||    ||  
-   .''''|.   .x.   ||      '||||      | 'M' ||    \\  ||    ||  
-  .|.  .||..|  ||..||.|'...|S.||....|.|. | .||.    3' D|...|'   
-  .............................................   //            
-                                                 /' v 1.1.0-pre   
-                                                                
-  Copyright (c) 2026 AxiSEM3D developers, MIT License           
-  Source, docs, and issues: github.com/AxiSEMunity/AxiSEM3D     
+
+      A            |i .|'''.|'||''''E'||    ||'  ____'||''|.
+     |||   ... ...... ||..  ' ||  .   |||  |||   ` // ||   ||
+    |  ||   '|..'  ||  ''|||. ||''|   |'|..'||    //  ||    ||
+   .''''|.   .x.   ||      '||||      | 'M' ||    \\  ||    ||
+  .|.  .||..|  ||..||.|'...|S.||....|.|. | .||.    3' D|...|'
+  .............................................   //
+                                                 /' v 1.1.0-pre
+
+  Copyright (c) 2026 AxiSEM3D developers, MIT License
+  Source, docs, and issues: github.com/AxiSEMunity/AxiSEM3D
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -153,4 +153,4 @@ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 
 See [Tools for Pre- and Post-processing](../processing/index.md) to visualize these results.
 
-Next, let's look at the yaml files. Note that the yaml files are self describing. Here, for brevity, the comments have been removed.  
+Next, let's look at the yaml files. Note that the yaml files are self describing. Here, for brevity, the comments have been removed.
