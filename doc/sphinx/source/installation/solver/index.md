@@ -40,7 +40,7 @@ easiest way. If necessary, the following CMake options can be specified (using t
 | FFTW3_DIR | | Optional hint to the FFTW directory |
 | NETCDF_DIR | | Optional hint to the NetCDF directory |
 | USE_PARALLEL_NETCDF | OFF | If set to ON, AxiSEM3D will write netCDF output with parallel routines. |
-| WITH_HDF5 | ON | If set to OFF or HDF5 is not found, diable HDF5 support | 
+| WITH_HDF5 | ON | If set to OFF or HDF5 is not found, disable HDF5 support |
 | HDF5_DIR | | Optional hint to the HDF5 directory |
 
 ---
