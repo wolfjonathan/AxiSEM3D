@@ -92,7 +92,7 @@ endif()
 
 # parallel NetCDF
 if(USE_PARALLEL_NETCDF)
-  add_definitions(-DAXISEM3DAXISEM3D_USE_PARALLEL_NETCDF)
+  add_definitions(-DAXISEM3D_USE_PARALLEL_NETCDF)
 endif()
 
 # skip _MM_SET_FLUSH_ZERO_MODE in fenv.cpp
