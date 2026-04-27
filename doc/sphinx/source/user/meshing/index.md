@@ -1,13 +1,9 @@
 # Meshing
 
 ## Overview
-AxiSEM3D makes use of the stand-alone mesher [SalvusMeshLite](https://gitlab.com/swp_ethz/public/SalvusMeshLite). 
-
-See Installation instructions for [The Mesher](../../installation/mesher.md). 
+AxiSEM3D makes use of the stand-alone mesher SalvusMeshLite. See the [Mesher Installation Instructions](../../installation/mesher.md) on information how to install.
 
 ## Usage
-
-Please see the [SalvusMeshLite](https://gitlab.com/swp_ethz/public/SalvusMeshLite) repository for the latest instructions.
 
 To create a self-explanatory `input.yaml` YAML file, run: 
 
