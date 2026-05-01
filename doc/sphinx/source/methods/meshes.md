@@ -1,11 +1,7 @@
 # Meshes
 
-- See here details of the mesher used by AxiSEM3D, [Salvus Mesher Lite](https://gitlab.com/swp_ethz/public/SalvusMeshLite)
-  .
-
-- The installation page for AxiSEM3D here also contains an excellent
-  section on the mesher:
-  <https://github.com/AxiSEMunity/AxiSEM3D/wiki/mesher>.
+The mesher use by AxiSEM3D is called [Salvus Mesh Lite](https://github.com/AxiSEMunity/salvus_mesh_lite).
+See the [Installation Instructions](../installation/mesher.md) and [Meshing documentation](../user/meshing/index.md) for more information.
 
 In general, you have a choice between Cartesian (box-shaped) meshes, and
 D-shaped (semi-circular) meshes. These obviously solve for the same
