@@ -96,7 +96,7 @@ if(USE_PARALLEL_NETCDF)
 endif()
 
 # skip _MM_SET_FLUSH_ZERO_MODE in fenv.cpp
-set(SKIP_MM_SET OFF CACHE BUILD "if ON, skip _MM_SET_FLUSH_ZERO_MODE in fenv.cpp")
+set(SKIP_MM_SET OFF CACHE BOOL "if ON, skip _MM_SET_FLUSH_ZERO_MODE in fenv.cpp")
 if(SKIP_MM_SET)
   add_definitions(-DAXISEM3D_SKIP_DISABLE_SSE_DENORMS)
 endif()
