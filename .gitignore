@@ -42,6 +42,8 @@ simu_with_3d_crust/
 .ipynb_checkpoints/
 build*/
 .cache/
+examples/*/output/
+examples/*/output__backup_at_*/
 
 # Documentation
 .venv
