@@ -1,4 +1,4 @@
-# 09 Regional Icesheet model
+# 08 Regional Icesheet model
 
 Regional scale model for Enceladus using topography. Topography model based on [Cadek et al., 2016]( https://doi.org/10.1002/2016GL068634). Geometric and volumetric models provided by [Dapre et al., 2024](https://doi.org/10.1029/2024JE008644).
 uses colatitude of 60 degrees. includes ice, ocean, and upper crust. Models source as contractional Mw 3.2 at (0,0)
