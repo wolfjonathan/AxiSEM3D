@@ -1,6 +1,7 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-red)](https://github.com/AxiSEMunity/AxiSEM3D/blob/main/LICENSE)
 [![CI Status](https://github.com/tjhei/AxiSEM3D/actions/workflows/linux.yml/badge.svg)](https://github.com/tjhei/AxiSEM3D/actions/workflows/linux.yml)
 [![Docs](https://app.readthedocs.org/projects/axisem3d/badge/)](https://axisem3d.readthedocs.io/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20142089.svg)](https://doi.org/10.5281/zenodo.20142089)
 
 # AxiSEM3D
 
