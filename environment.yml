@@ -16,7 +16,7 @@ dependencies:
   - mpi=*=mpich
 
   # Core solver dependencies
-  - eigen=3.4.1
+  - eigen=3.4.0
   - boost-cpp=1.85.0
   - fftw=3.3.10
   - metis=5.2.1
