@@ -1,12 +1,12 @@
-# 08 Atmosphere-coupled acoustic wave propagation (Mars)
+# 07 Atmosphere-coupled acoustic wave propagation (Mars)
 
-## 08.1 Introduction
+## 07.1 Introduction
 
 This is a script that should allow you to compute seismic (acoustic) wave propagation coupled between the atmosphere and the ground. We do this for a Mars example, but you could equally adapt it to the Earth, Titan, or another body that we've tested with - or indeed one that we have not.
 
 It is particularly important to remember that this is a linear, static-background, gravity-free model. These things are not so important in solid-Earth (or solid-Mars) seismology, but they matter much more here. You cannot add winds into the atmosphere, or compute the spectrum of atmospheric gravity waves. What you can do however is calculate the linearised pressure wave coupling from an explosion in the atmosphere into the ground, or indeed the other way around, across a frequency range of your choice.
 
-## 08.2 Models
+## 07.2 Models
 
 If you want to use an absorbing boundary (AB) at the top of the atmosphere, to prevent spurious reflections, you need to set the model up to do this. This may not be needed - for example if you are just interested in the initial coupling of the pressure-wave into the ground and don't care about what happens afterward - but in most cases it is important.
 
@@ -14,13 +14,13 @@ The way that you do this in AxiSEM3D requires editing the base model (`tayak_atm
 
 We will assume that you have already read the AxiSEM3D guide to salvus mesher, and know that there is an input (.bm file), some flags (--basic. etc), and an output (.e)
 
-### 08.2.1 The input (.bm file)
+### 07.2.1 The input (.bm file)
 
 The .bm file is just the same as it is in other cases, apart from the fact that the uppermost layer is an atmosphere (defined by vs = 0). Even if your base model is anisotropic and anelastic, you cannot have either of these features enabled in the atmosphere at present, even though they exist to some degree. The code can probably deal with mistakes here, but just to be sure make sure that vpv = vph (and both vs values are zero).
 
-If you look at the given example, the atmosphere extends an extra 60km above the base radius of Mars (3389.5km). We'll go into more detail about why this is in section 08.2.3; but do note that the uppermost 30km of the atmosphere is constant density.
+If you look at the given example, the atmosphere extends an extra 60km above the base radius of Mars (3389.5km). We'll go into more detail about why this is in section 07.2.3; but do note that the uppermost 30km of the atmosphere is constant density.
 
-### 08.2.2 The output (.e file)
+### 07.2.2 The output (.e file)
 
 The command to generate the mesh with an atmosphere is no different to without, i.e. something like:
 
@@ -40,7 +40,7 @@ run.
 
 I recommend checking this in Paraview to make sure that vs drops to zero where you think it should, and getting a feel for how much lower dt is in the atmosphere as compared to the ground (which is in a way a measure of inefficiency).
 
-### 08.2.3 The inparam files
+### 07.2.3 The inparam files
 
 As we noted earlier, the mesh is not decoupled from the simulation input parameters in simulations such as this (whereas it is for a global model). What I mean by this is that the absorbing boundary at the top of the atmosphere requires you to extend the mesh slightly more than you actually want to simulate, in order to make sure that all of the waves are absorbed at that interface successfully.
 
@@ -58,14 +58,14 @@ Of course, you could just use a real atmosphere model out to 60km and then use t
 
 What this does mean is that if you really ought not put the source, or indeed any receivers (!) in the atmosphere above ~25km or so.
 
-## 08.3. Fluid input files
+## 07.3. Fluid input files
 
 The only other input file that you need to change for this type of simulation is the `inparam.source`. Of course, you can add receivers in the atmosphere and change the calculated quantity, but there's nothing special about how that works.
 
 Under source mechanism, choose FLUID_PRESSURE. This gives you exactly one free parameter, the overpressure due to the source. You can in general set this to what you like, the calculation is linear. Just choose your units to match what you want.
 
 
-## 08.4. Things that don't quite work
+## 07.4. Things that don't quite work
 
 It doesn't really make sense that the sponge layer is a fraction of the thickness of the total mesh, it would be much more logical to make it a fraction of the thickness of the outermost layer (at least for global models) - not least because the atmosphere has so many elements in it that I expect the damping works better than it does in the solid ground (?). For the same reason, extending the atmosphere by 30km outward is really wasteful computationally. However there is not currently a fix that I can see to this.
 
