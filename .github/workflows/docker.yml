@@ -4,6 +4,7 @@ on:
   push: 
     branches:
       - 'main'
+      - 'axisem3d-*'
   release:
     types: [published] 
 
