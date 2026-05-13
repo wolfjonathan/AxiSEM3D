@@ -2,7 +2,7 @@ name: Compile
 
 on:
   push:
-    branches: [main, master]
+    branches: [main, master, axisem3d-*]
   pull_request:
     branches: [main, master]
 
