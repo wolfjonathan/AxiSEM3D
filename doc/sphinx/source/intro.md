@@ -40,8 +40,20 @@ In citing AxiSEM3D, please cite BOTH the code and the relevant published work.
 
 Cite the code as:
 
-    @article {
-
+    @software{leng_2026_20142089,
+    author       = {Leng, Kuangdai and
+                  Fernando, Benjamin and
+                  Wolf, Jonathan and
+                  Heister, Timo and
+                  Hwang, Lorraine and
+                  Nissen-Meyer, Tarje},
+    title        = {AxiSEM3D v2.1.0},
+    month        = may,
+    year         = 2026,
+    publisher    = {Zenodo},
+    version      = {2.1.0},
+    doi          = {10.5281/zenodo.20142089},
+    url          = {https://doi.org/10.5281/zenodo.20142089},
     }
 
 Add the following articles {cite:p}`Leng2016` and {cite:p}`Leng2019` to your list of References:
