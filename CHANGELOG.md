@@ -10,6 +10,9 @@ Add new entries a the bottom of the unreleased list. Item format:
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+
 ## [2.1.0] - 2026-05-12
 
 - Updated salvusmesh lite location and install it [Timo Heister, Jarett Baker-Dunn; 2026-04-14; #195]
@@ -22,7 +25,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [2.0.0] - 2020-07-09
 
-- Re-write of original AxiSEM3D code, now hosted within the AxiSEMUnity Organisation 
+- Re-write of original AxiSEM3D code, now hosted within the AxiSEMUnity Organisation
 - Removes FORTRAN routines for Crust 1.0 and S20/40 RTS
 
 ## [1.0.0] - 2019-01-01
@@ -33,5 +36,5 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - First releasee of AxiSEM3D as described in Leng et al (2016)
 
-[2.1.0]: https://github.com/AxiSEMunity/AxiSEM3D/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/AxiSEMunity/AxiSEM3D/releases/tag/v1.0.0
+[Unreleased]: https://github.com/AxiSEMunity/AxiSEM3D/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/AxiSEMunity/AxiSEM3D/compare/v2.0.0...v2.1.0
