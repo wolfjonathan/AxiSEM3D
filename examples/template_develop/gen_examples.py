@@ -601,7 +601,7 @@ copy_templates(d)
 item_src_06 = snippet('ex06_list_of_sources.yaml')
 replace_in_file(jp(d, 'inparam.source.yaml'),
                 ['list_of_sources: []', 'record_length: 1800.'],
-                ['list_of_sources:\n' + item_src_06, 'record_length: 40.'])
+                ['list_of_sources:\n' + item_src_06, 'record_length: 30.'])
 
 replace_in_file(jp(d, 'inparam.model.yaml'),
                 ['exodus_mesh: global_mesh__prem_ani__50s.e',
@@ -632,7 +632,7 @@ replace_in_file(jp(d, 'inparam.nr.yaml'),
                 ['type_Nr: CONSTANT', 'constant: 5',
                  'nc_data_file: pointwise.nc'],
                 ['type_Nr: POINTWISE', 'constant: 3000',
-                 'nc_data_file: SFBA_finite_rupture_Nr0.nc'])
+                 'nc_data_file: point_source_approx.nc'])
 replace_in_file(jp(d, 'inparam.nr.yaml'),
                 ['enable_scanning: false',
                  'output_file: scanning_output_Nr.nc',
