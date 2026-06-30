@@ -1,0 +1,19 @@
+name: lunar_env  # Name of your environment
+channels:
+  - conda-forge  # Add conda-forge as the primary channel
+  - defaults     # Optionally include defaults as a fallback
+dependencies:
+  - python==3.11.8
+  - numpy
+  - pyvista
+  - open3d
+  - netcdf4
+  - moviepy
+  - opencv
+  - obspy
+  - future
+  - seaborn
+  - pandas
+  - pyyaml
+  - basemap
+
